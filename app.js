@@ -20,4 +20,6 @@ http.createServer(function(req, res) {
   }
 
   //when info comes to server, here's the port to listen on, and ip address (local host)
-}).listen(1337, '127.0.0.1');
+}).listen(1337, '127.0.0.1', function() {
+  console.log('Server listening on port 1337');
+});

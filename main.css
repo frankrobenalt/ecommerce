@@ -1,0 +1,40 @@
+
+/* HEADER STYLES */
+.header {
+  background-color: rgb(177, 189, 209);
+  color: rgb(177, 189, 209);
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+.header-nav {
+  float: right;
+  padding: 30px 60px 30px 0;
+}
+.header-nav > li {
+  display: inline-block;
+  margin-left: 1em;
+}
+.header-nav > li ~ li {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1em;
+}
+.header-nav a {
+  color: rgb(15, 107, 255);
+}
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header-nav a:hover,
+.header-nav a:active {
+  color: rgb(104, 104, 104);
+}
+.header-nav > li:first-child a {
+  color: rgb(15, 107, 255);
+}
+.header-nav > li:first-child a:hover {
+  color: rgb(104, 104, 104);
+}
