@@ -1,25 +1,25 @@
-//gets HTTP module and what's attached to its exports
-var http = require('http');
-//gets the file module for getting html
+//server requires these packages
+var express = require('express');
+var bodyParser = require('body-parser');
 var fs = require('fs');
 
-//method available that creates new server object, takes a callback function, actually an event listener
-//request coming in, response going back
-http.createServer(function(req, res) {
-  //routes to correct url
-  if (req.url === '/') {
-    //writing html to response stream
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    //connect a readable file stream and pipe it to response stream
-    //every chunk of data read from file is buffered and piped out to http response stream
-    fs.createReadStream(__dirname + '/index.html').pipe(res);
-  } else {
-    //gives error if user goes to url extension which doesnt exist
-    res.writeHead(404);
-    res.end('We could not find that link');
-  }
+//initialized with express
+var app = express();
 
-  //when info comes to server, here's the port to listen on, and ip address (local host)
-}).listen(1337, '127.0.0.1', function() {
-  console.log('Server listening on port 1337');
+//use json body parser
+app.use(bodyParser.urlencoded({ extended: false }))
+//provide access to static data - css, images, javascript files, etc.
+app.use(express.static('./'));
+
+//serve the index file
+app.get('/', function(req, res){
+  console.log('requested GET')
+  res.sendfile('index.html');
+});
+
+//set port to listen on
+var port = process.env.PORT || 3000;
+//server will be listening for requests
+app.listen(port, function(){
+  console.log('Server listening for requests...')
 });
