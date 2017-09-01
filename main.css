@@ -1,4 +1,5 @@
 /* lato-regular - latin */
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -37,11 +38,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  background-image: url('https://cdn-images-1.medium.com/max/1200/1*WjrrpHe_beDynmVyo0wClw.png');
+  /* background-image: url('https://cdn-images-1.medium.com/max/1200/1*WjrrpHe_beDynmVyo0wClw.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;
-  height:100vh;
+  height:; */
 }
 blockquote, q {
   quotes: none;
@@ -72,7 +73,7 @@ html {
 }
 /* HEADER STYLES */
 .header {
-  background: linear-gradient(to left, hsl(0, 7%, 97%), hsla(0, 33%, 98%, 0.00));
+  background: linear-gradient(to right, rgba(5, 4, 4, 0.84), rgba(252, 248, 248, 0.83));
   color: #fff;
   position: fixed;
   width: 100%;
@@ -107,7 +108,14 @@ html {
   letter-spacing: 1px;
 }
 
-/* BODY STYLES */
+/* BODY STYLES 
+fonts:
+numbers --> font-family: 'Josefin Sans', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Playfair Display SC', serif;
+*/
+
 .container {
   padding-top: 80px;
   
@@ -118,27 +126,49 @@ html {
   text-align: center;
   padding: 10px;
 }
-.main{
+.welcome-box {
+  height: 500px;
+}
+.art-outside-container{
+  width: 100%;
+  background-color: gray;
+}
+.art-content-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+.art-row-container {
+  display: flex;
+  justify-content: space-between;
+}
+.product-container {
   display: flex;
   flex-direction: column;
-  justify-content:;
   align-items: center;
-}
-.product-display{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: wrap;
-  
-}
-.print{
-  display: flex;
-  align-items: center;
-  height: 50%;
-  width: 50%;
-  margin: 50px;
+  width: 32%;
+  position: relative;
 }
 img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto; 
+  opacity: 1;
+  transition: ease-out .2s;
+}
+
+
+.text-box {
+  height: 200px;
+  margin: 10px;
+  margin-top: 20px;
+}
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 45px;
+  margin: 10%;
+  float: right;
 }
