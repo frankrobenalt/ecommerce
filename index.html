@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='trapApp'>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="main.css">
   </head>
-  <body>
+  <body ng-controller="mainCtrl">
     <header class="header">
       <nav>
         <ul class="header-nav">
@@ -22,11 +22,13 @@
 
 <section class="welcome-box">
 
-
+  <img src='images/logo.png'>
 
 </section>
 
-<section>
+<ui-view></ui-view>
+
+<!-- <section>
   <div class="art-outside-container>">
 
     <div class="art-content-container">
@@ -35,12 +37,11 @@
 
         <div class="product-container">
 
-          <div class="image">
-              <img src='images/wave.png'>
+          <div class="image1">
             <div class="overlay">
-             
+              <h1>Fiji</h1>
+              <h3>Buy Now</h3>
             </div>
-            
           </div>
 
             <div class="text-box">
@@ -54,7 +55,7 @@
 
         <div class="product-container">
             
-          <div class="image">
+          <div class="image2">
 
             <img src='images/ali.png'>
 
@@ -119,7 +120,7 @@
         <div class="product-container">
             
           <div class="image">
-            <img src='images/wave.png'>
+            <img src='images/tupac.gif'>
           </div>
             
             <div class="text-box">
@@ -128,12 +129,16 @@
                           
             
             </div>
-        </div>        
+        </div>         -->
 
       </div> 
     </div>
   </div>
 </section>  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>   
+<script src="app.js"></script>
+<script src="controllers/mainCtrl.js"></script>
 
   </body>
 </html>
